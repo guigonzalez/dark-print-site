@@ -107,96 +107,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Configuração do EmailJS
-    (function(){
-        // Substitua com suas credenciais do EmailJS
-        emailjs.init("mW5w7L67WpvYL87Ec"); // Substitua com sua chave pública
-    })();
 
-    // Função para enviar o formulário
-    const form = document.getElementById('orcamento-form');
-    const btnText = document.querySelector('.btn-text');
-    const btnLoading = document.querySelector('.btn-loading');
-    const enviarBtn = document.getElementById('enviar-btn');
-    const successMessage = document.getElementById('form-success');
-    const errorMessage = document.getElementById('form-error');
 
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Mostrar loading
-            btnText.style.display = 'none';
-            btnLoading.style.display = 'inline-flex';
-            enviarBtn.disabled = true;
-
-            // Esconder mensagens anteriores
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
-
-            // Coletar dados do formulário
-            const formData = new FormData(form);
-            const templateParams = {
-                nome: formData.get('nome'),
-                empresa: formData.get('empresa') || 'Não informado',
-                email: formData.get('email'),
-                telefone: formData.get('telefone'),
-                produto: formData.get('produto'),
-                quantidade: formData.get('quantidade') || 'Não informado',
-                mensagem: formData.get('mensagem') || 'Não informado',
-                prazo: formData.get('prazo') || 'Não informado',
-                data: new Date().toLocaleDateString('pt-BR'),
-                hora: new Date().toLocaleTimeString('pt-BR')
-            };
-
-            // Enviar email via EmailJS
-            emailjs.send('service_fxrj1lw', 'template_i5vx3gb', templateParams)
-                .then(function(response) {
-                    console.log('Email enviado com sucesso!', response);
-                    
-                    // Mostrar mensagem de sucesso
-                    successMessage.style.display = 'block';
-                    form.reset();
-                    
-                    // Scroll para a mensagem de sucesso
-                    successMessage.scrollIntoView({ behavior: 'smooth' });
-                    
-                }, function(error) {
-                    console.error('Erro ao enviar email:', error);
-                    
-                    // Mostrar mensagem de erro
-                    errorMessage.style.display = 'block';
-                    
-                    // Scroll para a mensagem de erro
-                    errorMessage.scrollIntoView({ behavior: 'smooth' });
-                })
-                .finally(function() {
-                    // Restaurar botão
-                    btnText.style.display = 'inline';
-                    btnLoading.style.display = 'none';
-                    enviarBtn.disabled = false;
-                });
-        });
-    }
-
-    // Função para máscara de telefone
-    const telefoneInput = document.getElementById('telefone');
+    // Função para os botões de orçamento dos produtos
+    const botoesOrcamento = document.querySelectorAll('.btn-orcamento');
     
-    if (telefoneInput) {
-        telefoneInput.addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
+    botoesOrcamento.forEach(botao => {
+        botao.addEventListener('click', function(e) {
+            e.preventDefault();
             
-            if (value.length >= 11) {
-                value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-            } else if (value.length >= 10) {
-                value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
-            } else if (value.length >= 6) {
-                value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
-            } else if (value.length >= 2) {
-                value = value.replace(/(\d{2})(\d{0,5})/, '($1) $2');
-            }
+            // Obter o nome do produto do data-produto
+            const nomeProduto = this.getAttribute('data-produto');
             
-            e.target.value = value;
+            // Criar mensagem personalizada para WhatsApp
+            const mensagem = `Olá! Gostaria de solicitar um orçamento para ${nomeProduto}. Podem me enviar informações sobre preços e prazos?`;
+            
+            // Codificar a mensagem para URL
+            const mensagemCodificada = encodeURIComponent(mensagem);
+            
+            // Abrir WhatsApp com a mensagem
+            const whatsappUrl = `https://wa.me/5511943955747?text=${mensagemCodificada}`;
+            window.open(whatsappUrl, '_blank');
         });
-    }
+    });
 });

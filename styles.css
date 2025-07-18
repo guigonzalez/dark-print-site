@@ -32,14 +32,26 @@ header .container {
     align-items: center;
 }
 
-.logo h1 {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo-text h1 {
     color: #ff6b35;
     font-size: 2rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
 }
 
-.logo span {
+.logo-text span {
     color: #cccccc;
     font-size: 0.9rem;
     font-weight: 300;
@@ -214,16 +226,56 @@ nav a:hover {
     line-height: 1.5;
 }
 
-.preco {
+.preco-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+    border-radius: 8px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+.preco-principal {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.preco-valor {
+    color: #ff6b35;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.preco-secundario {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-bottom: 0;
+}
+
+.btn-orcamento {
+    width: 100%;
     margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     background: linear-gradient(45deg, #ff6b35, #ff8c42);
     color: white;
-    font-weight: bold;
+    border: none;
     border-radius: 5px;
-    font-size: 0.9rem;
-    display: inline-block;
-    box-shadow: 0 2px 10px rgba(255, 107, 53, 0.3);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn-orcamento:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.btn-orcamento:active {
+    transform: translateY(0);
 }
 
 .sobre {
@@ -513,6 +565,16 @@ footer p {
     header .container {
         flex-direction: column;
         gap: 1rem;
+    }
+    
+    .logo {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .logo-img {
+        height: 40px;
     }
     
     .cta-button {
