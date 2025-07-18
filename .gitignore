@@ -1,0 +1,19 @@
+# Ferramentas de atualização de preços (apenas para uso local)
+tools/
+
+# Backups gerados pelos scripts
+*.backup*
+
+# Node.js
+node_modules/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Logs
+*.log
