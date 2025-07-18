@@ -338,8 +338,16 @@ nav a:hover {
 .contato h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: #ffffff;
+}
+
+.contato-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #ff6b35;
+    font-weight: 500;
 }
 
 .contato-info {
@@ -355,7 +363,20 @@ nav a:hover {
     background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%);
     border-radius: 10px;
     border: 1px solid #333;
+    position: relative;
+    overflow: hidden;
 }
+
+.info-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b35, #ff8c42);
+}
+
 
 .info-item h3 {
     font-size: 1.3rem;
@@ -368,18 +389,81 @@ nav a:hover {
     margin-bottom: 0.5rem;
 }
 
+.info-item p strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
 .cta-section {
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
     background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%);
-    border-radius: 10px;
+    border-radius: 15px;
     border: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b35, #ff8c42);
+}
+
+.cta-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
 }
 
 .cta-section p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    color: #ffffff;
+    color: #cccccc;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    border: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+    transform: translateY(-2px);
+}
+
+
+.contact-benefits {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.contact-benefits p {
+    color: #25D366;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contact-benefits p::before {
+    content: '✓ ';
+    color: #25D366;
+    font-weight: bold;
 }
 
 footer {
@@ -555,6 +639,11 @@ footer p {
     
     .contato-info {
         grid-template-columns: 1fr;
+    }
+    
+    .contact-benefits {
+        flex-direction: column;
+        gap: 0.5rem;
     }
     
     nav ul {
