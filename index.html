@@ -17,11 +17,23 @@
                     <span>Gráfica Digital em Bertioga - SP</span>
                 </div>
             </div>
-            <nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="#produtos">Produtos</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-nav" id="mobileNav">
+                <ul>
+                    <li><a href="#produtos" class="mobile-nav-link">Produtos</a></li>
+                    <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
+                    <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,9 +61,11 @@
                             <p>Impressão em alta qualidade, diversos acabamentos</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 28,00</span> para 20 unidades</p>
-                                <p class="preco-secundario">100 unidades por apenas <strong>R$ 0,01</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Cartões de Visita">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/cartoes-visita.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Cartões de Visita">Solicitar Orçamento</button>
+                            </div>
                         </div>
                         <div class="produto">
                             <img src="images/folders.jpg" alt="Folders" class="produto-img">
@@ -59,9 +73,11 @@
                             <p>Material promocional dobrável, ideal para apresentações</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 65,00</span> para 25 unidades</p>
-                                <p class="preco-secundario">20.000 unidades por apenas <strong>R$ 0,01</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Folders">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/folders.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Folders">Solicitar Orçamento</button>
+                            </div>
                         </div>
                         <div class="produto">
                             <img src="images/agendas.jpg" alt="Agendas" class="produto-img">
@@ -69,9 +85,11 @@
                             <p>Personalizadas para sua empresa ou evento</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 133,00</span> por unidade</p>
-                                <p class="preco-secundario">100 unidades por apenas <strong>R$ 55,35</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Agendas">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/agendas.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Agendas">Solicitar Orçamento</button>
+                            </div>
                         </div>
                         <div class="produto">
                             <img src="images/calendarios.jpg" alt="Calendários" class="produto-img">
@@ -79,9 +97,11 @@
                             <p>Anuais, mensais e personalizados</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 70,00</span> para 5 unidades</p>
-                                <p class="preco-secundario">100 unidades por apenas <strong>R$ 0,01</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Calendários">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/calendarios.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Calendários">Solicitar Orçamento</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -95,19 +115,23 @@
                             <p>Para eventos, promoções e fachadas</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 34,00</span> por unidade</p>
-                                <p class="preco-secundario">50 unidades por apenas <strong>R$ 32,48</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Banners">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/banners.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Banners">Solicitar Orçamento</button>
+                            </div>
                         </div>
                         <div class="produto">
-                            <img src="images/flyers.jpg" alt="Flyers" class="produto-img">
-                            <h4>Flyers</h4>
+                            <img src="images/flyers.jpg" alt="Panfletos" class="produto-img">
+                            <h4>Panfletos</h4>
                             <p>Panfletos promocionais de alto impacto</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 207,00</span> para 500 unidades</p>
-                                <p class="preco-secundario">1.000 unidades por apenas <strong>R$ 0,01</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Flyers">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/panfletos.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Panfletos">Solicitar Orçamento</button>
+                            </div>
                         </div>
                         <div class="produto">
                             <img src="images/cartazes.jpg" alt="Cartazes" class="produto-img">
@@ -115,9 +139,11 @@
                             <p>Diversos tamanhos e acabamentos</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 17,00</span> por unidade</p>
-                                <p class="preco-secundario">1.000 unidades por apenas <strong>R$ 0,01</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Cartazes">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/cartazes.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Cartazes">Solicitar Orçamento</button>
+                            </div>
                         </div>
                         <div class="produto">
                             <img src="images/displays.jpg" alt="Displays de Mesa" class="produto-img">
@@ -125,9 +151,11 @@
                             <p>Suportes promocionais para balcões</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 129,00</span> para 5 unidades</p>
-                                <p class="preco-secundario">500 unidades por apenas <strong>R$ 0,01</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Displays de Mesa">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/displays.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Displays de Mesa">Solicitar Orçamento</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,9 +169,11 @@
                             <p>Personalizados, resistentes e duráveis</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 22,00</span> para 40 unidades</p>
-                                <p class="preco-secundario">160 unidades por apenas <strong>R$ 0,01</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Adesivos e Rótulos">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/adesivos.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Adesivos e Rótulos">Solicitar Orçamento</button>
+                            </div>
                         </div>
                         <div class="produto">
                             <img src="images/etiquetas.jpg" alt="Etiquetas" class="produto-img">
@@ -151,9 +181,11 @@
                             <p>Para produtos, identificação e organização</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 32,00</span> para 100 unidades</p>
-                                <p class="preco-secundario">1.000 unidades por apenas <strong>R$ 0,01</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Tags">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/tags.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Tags">Solicitar Orçamento</button>
+                            </div>
                         </div>
                         <div class="produto">
                             <img src="images/lacres.jpg" alt="Lacres" class="produto-img">
@@ -161,19 +193,23 @@
                             <p>Segurança e identificação de produtos</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 118,00</span> para 1.000 unidades</p>
-                                <p class="preco-secundario">2.000 unidades por apenas <strong>R$ 0,01</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Lacres">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/lacres.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Lacres">Solicitar Orçamento</button>
+                            </div>
                         </div>
                         <div class="produto">
-                            <img src="images/tags.jpg" alt="Tags" class="produto-img">
+                            <img src="images/blocos.jpg" alt="Blocos" class="produto-img">
                             <h4>Blocos</h4>
                             <p>Para anotações e lembretes diários</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 136,00</span> para 5 unidades</p>
-                                <p class="preco-secundario">50 unidades por apenas <strong>R$ 6,56</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Blocos">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/blocos.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Blocos">Solicitar Orçamento</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,9 +223,11 @@
                             <p>Suportes profissionais para apresentação</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 83,00</span> para 500 unidades</p>
-                                <p class="preco-secundario">1.000 unidades por apenas <strong>R$ 0,01</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Cartelas para Bijuteria">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/cartelas-bijuteria.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Cartelas para Bijuteria">Solicitar Orçamento</button>
+                            </div>
                         </div>
                         <div class="produto">
                             <img src="images/fitas-cetim.jpg" alt="Fitas de Cetim" class="produto-img">
@@ -197,9 +235,11 @@
                             <p>Personalizadas para eventos e produtos</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 117,00</span> por unidade</p>
-                                <p class="preco-secundario">10 unidades por apenas <strong>R$ 93,42</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Fitas de Cetim">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/fitas-cetim.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Fitas de Cetim">Solicitar Orçamento</button>
+                            </div>
                         </div>
                         <div class="produto">
                             <img src="images/brindes.jpg" alt="Brindes Personalizados" class="produto-img">
@@ -207,9 +247,11 @@
                             <p>Diversos materiais promocionais</p>
                             <div class="preco-info">
                                 <p class="preco-principal">A partir de <span class="preco-valor">R$ 36,00</span> por unidade</p>
-                                <p class="preco-secundario">50 unidades por apenas <strong>R$ 2,69</strong> por unidade</p>
                             </div>
-                            <button class="btn-orcamento" data-produto="Brindes Personalizados">Solicitar Orçamento</button>
+                            <div class="produto-botoes">
+                                <a href="produtos/brindes.html" class="btn-saiba-mais">Saiba Mais</a>
+                                <button class="btn-orcamento" data-produto="Brindes Personalizados">Solicitar Orçamento</button>
+                            </div>
                         </div>
                     </div>
                 </div>

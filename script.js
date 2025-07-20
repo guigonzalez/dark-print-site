@@ -64,13 +64,35 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(differential);
     });
 
-    // Mobile menu toggle (if needed later)
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('nav ul');
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     
-    if (navToggle) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+    if (mobileMenuBtn && mobileNav) {
+        mobileMenuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            if (mobileNav.style.display === 'block') {
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'block';
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuBtn.classList.remove('active');
+                mobileNav.style.display = 'none';
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
+                mobileMenuBtn.classList.remove('active');
+                mobileNav.style.display = 'none';
+            }
         });
     }
 
